@@ -40,7 +40,7 @@
   }
 
   /* ---- Ink splash overlay: bursts in early, then flows freely (no opacity change — it just moves out of the way) ---- */
-  #inkLogo_inkSplashOverlay { pointer-events: none; }
+  #inkLogo_inkSplashOverlay { pointer-events: none; shape-rendering: geometricPrecision; }
 
   #inkLogo_splashBlob {
     fill: #2D303F;
