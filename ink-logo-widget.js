@@ -6,7 +6,9 @@
 <style>
   .ink-logo-card {
     width: 360px;
-    height: 360px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
