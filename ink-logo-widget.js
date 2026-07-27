@@ -6,9 +6,7 @@
 <style>
   .ink-logo-card {
     width: 200px;
-    max-width: 100%;
-    aspect-ratio: 1 / 1;
-    height: auto;
+    height: 200px;
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
@@ -169,17 +167,26 @@
 `;
 
   var card = mount.querySelector('.ink-logo-card');
+  var svg = mount.querySelector('svg');
   var script = mount.querySelector('script');
   if (script) { script.parentNode.removeChild(script); } // avoid double-defining the function
 
   var size = mount.getAttribute('data-size');
-  if (card && size) { card.style.width = size + 'px'; }
+  if (card && size) {
+    card.style.width = size + 'px';
+    card.style.height = size + 'px';
+    if (svg) {
+      var svgSize = (parseFloat(size) * 0.82) + 'px';
+      svg.style.width = svgSize;
+      svg.style.height = svgSize;
+    }
+  }
 
   function inkLogoReplay() {
-    var svg = document.getElementById('inkLogo_logo-svg');
-    if (!svg) return;
-    var clone = svg.cloneNode(true);
-    svg.replaceWith(clone);
+    var svgEl = document.getElementById('inkLogo_logo-svg');
+    if (!svgEl) return;
+    var clone = svgEl.cloneNode(true);
+    svgEl.replaceWith(clone);
     clone.id = 'inkLogo_logo-svg';
   }
 
