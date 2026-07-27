@@ -5,7 +5,7 @@
   mount.innerHTML = `<div class="ink-logo-card" onclick="inkLogoReplay()">
 <style>
   .ink-logo-card {
-    width: 360px;
+    width: 200px;
     max-width: 100%;
     aspect-ratio: 1 / 1;
     height: auto;
@@ -171,6 +171,9 @@
   var card = mount.querySelector('.ink-logo-card');
   var script = mount.querySelector('script');
   if (script) { script.parentNode.removeChild(script); } // avoid double-defining the function
+
+  var size = mount.getAttribute('data-size');
+  if (card && size) { card.style.width = size + 'px'; }
 
   function inkLogoReplay() {
     var svg = document.getElementById('inkLogo_logo-svg');
