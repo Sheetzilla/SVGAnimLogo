@@ -49,7 +49,7 @@
     animation-delay: 1s;
   }
   @keyframes splashBurstFlow {
-    0%   { transform: scale(0) translateZ(0); animation-timing-function: ease-in; }
+    0%   { transform: scale(0) translateZ(0); animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
     30%  { transform: scale(1.35) translateZ(0); animation-timing-function: ease-in; }
     62%  { transform: scale(1.5) translateZ(0); }
     100% { transform: scale(1.8) translateZ(0); }
