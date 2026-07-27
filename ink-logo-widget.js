@@ -87,7 +87,7 @@
   }
 </style>
 
-<div class="ink-logo-card" onclick="inkLogoReplay()">
+
   <svg id="inkLogo_logo-svg" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
 
     <defs>
